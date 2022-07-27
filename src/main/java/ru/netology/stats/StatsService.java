@@ -28,12 +28,12 @@ public class StatsService {
         int maxMonth = 0;
         int month = 0;
         for (int sale : sales) {
-            if (sale <= sales[maxMonth]) {
+            if (sale >= sales[maxMonth]) {
                 maxMonth = month;
             }
             month = month + 1;
         }
-        return maxMonth;
+        return maxMonth + 1;
     }
 
     // 4. Номер месяца, в котором был минимум продаж.
